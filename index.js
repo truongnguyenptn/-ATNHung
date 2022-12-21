@@ -9,7 +9,9 @@ function showMessage(message) {
   x.innerHTML = message;
   x.className = "show";
   // After 3 seconds, remove the show class from DIV
-  setTimeout(function () { x.className = x.className.replace("show", ""); }, 6000);
+  setTimeout(function () {
+    if (x.className.includes("show")) x.className.replace("show", "");
+  }, 6000);
 }
 const waterData = waterByMonth.map((water, index) => {
   return (
