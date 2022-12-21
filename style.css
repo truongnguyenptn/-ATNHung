@@ -117,16 +117,15 @@
   }
   .body {
     display: block;
+    margin: 0 8px !important;
   }
   #table {
     max-width: 100%;
-    margin: 0 auto !important;
     display: block;
   }
   .styled-table {
-    margin: 0 auto;
-    padding: 0;
-    min-width: 0;
+    margin: 0 auto !important;
+    min-width: 100%;
     max-width: 100%;
   }
   .graph {
