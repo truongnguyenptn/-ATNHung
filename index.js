@@ -36,7 +36,7 @@ months.forEach((month, index) => {
   else if (waterByMonth[index] >= 340 && waterByMonth[index] <= 380) {
     if (waterByMonth[index] >= 374 && waterByMonth[index] < 376) messageContext = "Vùng cung cấp nâng cao , cho phép tăng mức cung cấp lưu lượng để phát điện (đến mức tối đa), đặc biệt vào mùa lũ ( thời khì tích nước tháng 10 đến tháng 1) để tránh xả thừa."
     else if (waterByMonth[index] >= 364 && waterByMonth[index] < 366) messageContext = " “Vùng cung cấp với mức nước đảm bảo”, lưu lượng trung bình được cung cấp bằng với giá trị lưu lượng đảm bảo tần số 90% (23.3 m3/s)."
-    if (waterByMonth[index] < 364 && index === 5) messageContext = "Mực nước  nằm trong vùng hạn chế 85% mức đảm bảo"
+    if (waterByMonth[index] < 364 && index + 1 === 5) messageContext = "Mực nước  nằm trong vùng hạn chế 85% mức đảm bảo"
     else if (waterByMonth[index] < 356) messageContext = "vùng cung cấp hạn chế 85% mức đảm bảo”, lưu lượng trung bình được cung cấp bằng 85% giá trị lưu lượng đảm bảo tần suất 90% (19,8m3/s)."
   }
   month.addEventListener("click", () => showMessage(messageContext))
